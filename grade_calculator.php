@@ -137,11 +137,11 @@
                 return ["grade" => "F", "status" => "不合格"];
             }
         }
-
+        
+        $studentCount = count($students);
+        $totalScore = 0;
         $passCount = 0;
         $failCount = 0;
-        $totalScore = 0;
-        $studentCount = count($students);
 
         echo "<h2>【個別成績】</h2>
                 <table>
@@ -175,7 +175,7 @@
         }
 
         echo   "</table>";
-        
+
         $averageScore = number_format($totalScore / $studentCount, 1);
 
         echo "<h2>【統計情報】</h2>
